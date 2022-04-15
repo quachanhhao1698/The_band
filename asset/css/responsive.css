@@ -1,0 +1,52 @@
+/* --------------------RESPONSIVE---------------- */
+
+@media (minx-width:1024px) {}
+
+
+/* ------------MOBILE----------- */
+
+@media (max-width:740px) {
+    .s-col-full {
+        width: 100%;
+        padding: 10px 24px;
+    }
+    #nav {
+        display: block;
+    }
+    #nav>li {
+        display: block;
+    }
+    #nav>li:first-child {
+        display: inline-block;
+    }
+    #nav li a {
+        display: block;
+        padding: 1px 24px;
+    }
+    #nav.subnav {
+        display: block;
+        position: inherit;
+        width: 100%;
+        background-color: #000;
+    }
+    #nav .subnav a {
+        color: #fff;
+        width: 100%;
+        padding: 5px 41px;
+    }
+    #header {
+        overflow: hidden;
+    }
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    .member-img {
+        width: 229px;
+    }
+    #content .content-section {
+        padding: 64px 0px 44px;
+    }
+}

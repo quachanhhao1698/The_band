@@ -1,0 +1,511 @@
+    /* Reset CSS */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-family: 'Lato', Arial, Helvetica, sans-serif, Helvetica, sans-serif, Helvetica, sans-serif;
+        scroll-behavior: smooth;
+    }
+    /* ----NOTE----
+    1.Từ ngoài vào trong
+    2.Từ trên xuống dưới
+    3.Từ tổng quan đến chi tiết
+-------------------------------------------------
+    1.Vị trí
+    2.Kích thước(width ,height)
+    3.Màu sắc
+    4.Kiểu dáng (kiểu chữ ,hình dạng ,màu sắc)
+---------------------------------------------
+    line-height       : áp dụng cho chữ.
+ */
+    /* conmom */
+    
+    .text-white {
+        color: #fff;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
+    .row::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .col {
+        float: left;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    .col-half {
+        width: 50%;
+    }
+    
+    .col-third {
+        width: 33.3333%;
+    }
+    
+    .col-full {
+        width: 100%;
+    }
+    
+    .btn {
+        margin: 0px 0px 16px;
+        padding: 8px 16px;
+        border: none;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+    
+    .pull-right {
+        float: right !important;
+    }
+    
+    .m-tb-16 {
+        margin: 16px 0px !important;
+    }
+    
+    .del-underline {
+        text-decoration: none !important;
+    }
+    /* main */
+    
+    #main {}
+    
+    #header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 46px;
+        background-color: #000;
+        z-index: 1;
+    }
+    
+    #nav {
+        display: inline-block;
+    }
+    
+    #nav,
+    .subnav {
+        list-style: none;
+    }
+    
+    #nav li {
+        display: inline-block;
+    }
+    
+    #nav li a {
+        text-transform: uppercase;
+        display: block;
+        color: white;
+        text-decoration: none;
+        line-height: 46px;
+        padding: 0 24px;
+    }
+    
+    #nav li .ti-angle-down {
+        font-size: 12px;
+    }
+    
+    #nav li:hover .subnav {
+        display: block;
+    }
+    
+    #nav .subnav li:hover a,
+    #nav>li:hover>a {
+        background-color: #ccc;
+        color: #000;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .subnav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0px 0px 4px black;
+        animation: navFadeIn ease 0.4s;
+    }
+    
+    #nav .subnav>li {
+        display: inline;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #nav .subnav a {
+        line-height: 38px;
+        text-transform: inherit;
+        color: #333;
+        padding: 0 12px;
+    }
+    
+    #header .mobile-menu-btn {
+        float: right;
+        padding: 0 21px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+    }
+    
+    #header .mobile-menu-btn,
+    #header .search-btn {
+        float: right;
+        padding: 0px 21px;
+        cursor: pointer;
+    }
+    
+    #header .search-btn:hover {
+        background-color: #f44336;
+        pointer-events: auto;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #header .menu-icon,
+    #header .search-icon {
+        color: white;
+        line-height: 46px;
+        font-size: 20px;
+    }
+    
+    .mobile-menu-btn:hover {
+        background-color: #ccc;
+    }
+    
+    .mobile-menu-btn:hover .menu-icon {
+        color: #000;
+    }
+    
+    #slider {
+        position: relative;
+        margin-top: 46px;
+        padding-top: 50%;
+        background: url('/asset/image/slider/slide1.jpg') top center /cover no-repeat;
+    }
+    
+    #slider .text-content {
+        position: absolute;
+        color: white;
+        bottom: 47px;
+        /* left: 50%;
+     transform        : translate(-50%); */
+        width: 100%;
+        text-align: center;
+    }
+    
+    #slider .text-heading {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    #slider .text-description {
+        font-size: 15px;
+    }
+    /* Main Conmom */
+    
+    #content {}
+    
+    #content .content-section {
+        width: 800px;
+        max-width: 100%;
+        padding: 64px 0px 112px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .section-heading {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 10px 0px;
+    }
+    
+    .section-sub-heading {
+        text-align: center;
+        font-size: 15px;
+        opacity: 0.6;
+        margin-top: 25px;
+        font-style: italic;
+    }
+    /*--------------------About_Section----------------*/
+    
+    .about-text {
+        text-align: justify;
+        margin-top: 15px;
+        line-height: 1.4;
+        margin-bottom: 48px;
+    }
+    
+    .member-list {
+        padding: 32px;
+    }
+    
+    .member-img {
+        margin-top: 15px;
+        width: 154px;
+        border-radius: 5%;
+    }
+    /*--------------------Tour_Section----------------*/
+    
+    .bg-black {
+        background-color: black;
+    }
+    
+    .book-ticket {
+        /* float: left; */
+        background-color: #fff;
+        margin-top: 30px;
+        list-style: none;
+    }
+    
+    .book-ticket .ticket {
+        padding: 8px 16px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .book-ticket .sold-out {
+        background-color: #f44336;
+        color: #fff;
+        padding: 2px 8px;
+        margin-left: 16px;
+    }
+    
+    .book-ticket .quantity {
+        float: right;
+        width: 25px;
+        text-align: center;
+        line-height: 22.5px;
+        color: white;
+        background-color: #333;
+        border-radius: 50%;
+    }
+    
+    .places-list {
+        margin-top: 32px;
+        margin-bottom: 48px;
+    }
+    
+    .card-item-img {
+        width: 100%;
+        display: block;
+    }
+    
+    .card-item-img:hover {
+        opacity: 0.6;
+    }
+    
+    .card-body {
+        background-color: white;
+        padding: 0.15px 16px;
+    }
+    
+    .location {
+        color: black;
+        font-weight: 700;
+        margin: 15px 0px;
+    }
+    
+    .date {
+        margin: 15px 0px;
+        opacity: 0.6;
+    }
+    
+    .about {
+        margin: 15px 0px;
+    }
+    /* --------------------Modal---------------- */
+    
+    .modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .openmodal {
+        display: flex;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .modal-container {
+        background-color: #fff;
+        position: relative;
+        width: 600px;
+        animation: modalFadeIn ease .5s;
+    }
+    
+    .modal-header {
+        background-color: #009594;
+        text-align: center;
+        padding: 32px 16px;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 16px;
+        color: #fff;
+        opacity: .5;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+    }
+    
+    .modal-close:hover {
+        opacity: 1;
+        font-size: 20px;
+        transform: rotate(180deg);
+    }
+    
+    .modal-heading {
+        color: #fff;
+        font-size: 30px;
+    }
+    
+    .heading-icon {
+        color: #fff;
+        font-size: 30px;
+        margin-right: 16px;
+    }
+    
+    .modal-body {
+        padding: 0.15px 16px;
+    }
+    
+    .modal-label {
+        display: block;
+        margin: 15px 0px;
+    }
+    
+    .modal-input {
+        padding: 8px;
+        width: 100%;
+    }
+    
+    .modal-btn {
+        color: white;
+        text-transform: uppercase;
+        display: block;
+        background-color: #009594;
+        text-align: center;
+        margin: 16px 0px;
+        padding: 16px;
+        border: none;
+        width: 100%;
+        opacity: 0.5;
+    }
+    
+    .modal-btn:hover {
+        opacity: 1;
+    }
+    
+    .modal-body>p {
+        float: right;
+        margin-bottom: 32px;
+    }
+    
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: translatey(-140px);
+        }
+        to {
+            opacity: 1;
+            transform: translate(0px);
+        }
+    }
+    
+    @keyframes navFadeIn {
+        from {
+            opacity: 0;
+            transform: translatey(calc(-100px));
+        }
+        to {
+            opacity: 1;
+            transform: translate(0px);
+        }
+    }
+    /* --------------------Contact_Section---------------- */
+    
+    .contact-content {
+        margin-top: 48px;
+    }
+    
+    .contact-info {
+        font-size: 18px !important;
+    }
+    
+    .contact-info i[class*="ti-"] {
+        width: 30px;
+        display: inline-block;
+        line-height: 1.5;
+    }
+    
+    .form-control {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 9px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    .btn-send:hover {
+        background-color: #ccc;
+    }
+    
+    .content-map {
+        width: 100%;
+    }
+    /* ------------------------FOOTER---------------- */
+    
+    #footer {
+        padding: 64px 14px;
+        text-align: center;
+        font-size: 24px;
+        opacity: 0.6;
+        box-sizing: border-box;
+    }
+    
+    #footer a {
+        color: #000;
+        display: inline-block;
+    }
+    
+    #footer a:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    
+    #footer p {
+        margin: 15px 0px;
+    }

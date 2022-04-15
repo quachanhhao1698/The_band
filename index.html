@@ -149,20 +149,20 @@
                         <form action="#">
                             <div class="row">
                                 <div class="col col-half">
-                                    <input type="text" name="name" required placeholder="Name" class="form-control">
+                                    <input id="ctName" type="text" name="name" required placeholder="Name" class="form-control">
                                 </div>
                                 <div class="col col-half">
-                                    <input type="email" name="email" required placeholder="Email" class="form-control">
+                                    <input id="ctEmail" type="email" name="email" required placeholder="Email" class="form-control">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col col-full">
-                                    <input type="text" name="message" required placeholder="Message" class="form-control">
+                                    <input id="ctMess" type="text" name="message" required placeholder="Message" class="form-control">
                                 </div>
                             </div>
 
                             <div>
-                                <input type="submit" value="Send" class="btn pull-right m-tb-16">
+                                <input onclick="handleSendContact()" type="button" value="Send" class="btn pull-right m-tb-16">
                             </div>
 
                         </form>
@@ -230,7 +230,7 @@
 
                 <input id="modal-mail" type="mail" class="modal-input" placeholder="Enter email">
 
-                <button class="modal-btn">Pay <i class="ti-check"></i></button>
+                <button onclick="handlePay()" class="modal-btn">Pay <i class="ti-check"></i></button>
                 <p>Need <a href="#" class="modal-help">help?</a></p>
 
             </div>
@@ -309,6 +309,25 @@
 
             }
         }
+
+        
+        
+        
+        handleSendContact = () => {
+            let ctName = document.getElementById('ctName').value;
+            let ctEmail = document.getElementById('ctEmail').value;
+            let ctMess = document.getElementById('ctMess').value;
+            
+            alert('Name: ' + ctName +
+                    '\nEmail: ' + ctEmail +
+                    '\nMessage: ' + ctMess)
+        }
+
+        handlePay = () => {
+            alert('Thank You');
+            hideBuytickets();
+        }
+
     </script>
 
 </body>

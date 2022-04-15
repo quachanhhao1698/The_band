@@ -8,7 +8,7 @@
 @media (max-width:740px) {
     .s-col-full {
         width: 100%;
-        padding: 10px 24px;
+        /* padding: 10px 24px; */
     }
     #nav {
         display: block;
@@ -21,7 +21,7 @@
     }
     #nav li a {
         display: block;
-        padding: 1px 24px;
+        /* padding: 1px 24px; */
     }
     #nav.subnav {
         display: block;
@@ -32,7 +32,7 @@
     #nav .subnav a {
         color: #fff;
         width: 100%;
-        padding: 5px 41px;
+        /* padding: 5px 41px; */
     }
     #header {
         overflow: hidden;
@@ -47,6 +47,6 @@
         width: 229px;
     }
     #content .content-section {
-        padding: 64px 0px 44px;
+        /* padding: 64px 0px 44px; */
     }
 }

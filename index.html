@@ -317,10 +317,12 @@
             let ctName = document.getElementById('ctName').value;
             let ctEmail = document.getElementById('ctEmail').value;
             let ctMess = document.getElementById('ctMess').value;
-            
-            alert('Name: ' + ctName +
-                    '\nEmail: ' + ctEmail +
-                    '\nMessage: ' + ctMess)
+            if(ctName != '' && ctEmail !='' && ctMess !='') {
+
+                alert('Name: ' + ctName +
+                        '\nEmail: ' + ctEmail +
+                        '\nMessage: ' + ctMess)
+            }
         }
 
         handlePay = () => {
